@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background:#f2f2f2;
+        }
+
+        .container{
+            width:700px;
+            margin:50px auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+        }
+
+        textarea{
+            width:100%;
+            height:150px;
+            padding:10px;
+            margin-top:20px;
+        }
+
+        button{
+            padding:10px 20px;
+            margin-top:20px;
+            background:blue;
+            color:white;
+            border:none;
+        }
+
+        .result{
+            margin-top:20px;
+            padding:15px;
+            background:#eee;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>SQL Injection Detection Dashboard</h1>
+
+    <form action="/check_query" method="POST">
+
+        <textarea
+        name="query"
+        placeholder="Enter SQL Query"></textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Check Query
+        </button>
+
+    </form>
+
+    {% if result %}
+
+    <div class="result">
+
+        <h2>{{ result }}</h2>
+
+        <p>{{ query }}</p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

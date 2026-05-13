@@ -1,0 +1,7 @@
+Flask
+mysql-connector-python
+pandas
+numpy
+scikit-learn
+reportlab
+gunicorn

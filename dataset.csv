@@ -1,0 +1,12 @@
+payload,label
+"hello",0
+"admin",0
+"product search",0
+"' OR 1=1 --",1
+"' OR '1'='1",1
+"UNION SELECT username,password FROM users",1
+"DROP TABLE users",1
+"sleep(5)",1
+"information_schema",1
+"normal text",0
+"login user",0
